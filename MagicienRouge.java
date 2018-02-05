@@ -3,12 +3,10 @@
  */
 public class MagicienRouge extends Magicien {
 
-    public void magicienNoir(int magie) {
-        this.magie = 40;
-    }
-
-    @Override
-    public void lancerSort() {
-
+    public void magicienNoir() {
+        setMagie(40);
+        setNom("Magicien Rouge");
+        getSorts()[0] = new Empoisonnement();
+        getSorts()[1] = new MortSubite();
     }
 }

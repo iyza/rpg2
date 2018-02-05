@@ -3,11 +3,10 @@
  */
 public class MagicienNoir extends Magicien {
 
-    public void magicienNoir(int magie) {
-        this.magie = 50;
-    }
-    @Override
-    public void lancerSort() {
-
+    public void magicienNoir() {
+        setMagie(50);
+        setNom("Magicien Noir");
+        getSorts()[0] = new BouleDeFeu();
+        getSorts()[1] = new PicDeGlace();
     }
 }

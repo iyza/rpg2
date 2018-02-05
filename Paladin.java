@@ -3,10 +3,10 @@
  */
 public class Paladin extends Guerrier{
 
-    public void paladin(int HP, int defense, int force, String nom) {
-        this.HP = 80;
-        this.defense = 5;
-        this.force = 5;
-        this.nom = "Paladin";
+    public void paladin() {
+        setHP(80);
+        setDefense(5);
+        setForce(5);
+        setNom("Paladin");
     }
 }
