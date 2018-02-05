@@ -3,7 +3,7 @@
  */
 public class Empoisonnement extends Sort{
     private int nbCast = 0;
-    public void empoisonnement () {
+    public Empoisonnement () {
         setDmg(2);
         setCout(2);
         setNomDuSort("Empoisonnement");

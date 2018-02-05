@@ -3,7 +3,7 @@
  */
 public class Paladin extends Guerrier{
 
-    public void paladin() {
+    public Paladin() {
         setHP(80);
         setDefense(5);
         setForce(5);

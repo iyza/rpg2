@@ -16,6 +16,6 @@ public abstract class Guerrier extends Personnage {
     @Override
     public void attaquer(Personnage personnage) {
         personnage.setHP(personnage.getHP()-(force*2-personnage.getDefense()));
-        System.out.println(getNom() + " attaque pour faire " + getForce() + "degats!");
+        System.out.println(getNom() + " attaque pour faire " + (getForce()*2-personnage.getDefense()) + "degats!");
     }
 }

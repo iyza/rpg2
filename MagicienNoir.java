@@ -3,7 +3,7 @@
  */
 public class MagicienNoir extends Magicien {
 
-    public void magicienNoir() {
+    public MagicienNoir() {
         setMagie(50);
         setNom("Magicien Noir");
         getSorts()[0] = new BouleDeFeu();

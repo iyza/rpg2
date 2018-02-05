@@ -2,7 +2,7 @@
  * Created by BajLu1731402 on 05/02/2018.
  */
 public class PicDeGlace extends Sort{
-    public void picDeGlace() {
+    public PicDeGlace() {
         setDmg(7);
         setCout(5);
         setNomDuSort("Pic de Glace");

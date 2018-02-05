@@ -6,7 +6,7 @@ public abstract class Magicien extends Personnage{
     protected int magie;
     protected Sort sorts[] = new Sort[2];
 
-    public void magicien() {
+    public Magicien() {
         setHP(60);
         setDefense(1);
     }
@@ -30,8 +30,8 @@ public abstract class Magicien extends Personnage{
     public void attaquer(Personnage personnage) {
         int coinFlip = (int)(Math.random()*2);
         if (getMagie() >= getSorts()[coinFlip].getCout()) {
-            setMagie(getMagie()-getSorts()[coinFlip].getCout());
-            System.out.println(getNom() + " lance le sort : " + getSorts()[coinFlip].getNomDuSort() + " et il perd " + getSorts()[coinFlip].getCout());
+
+            System.out.println(getNom() + " lance le sort : " + getSorts()[coinFlip].getNomDuSort() + " et il perd " + getSorts()[coinFlip].getCout() + " magie.");
             magie = magie - getSorts()[coinFlip].getCout();
             System.out.println("Il lui reste " + magie + " magie.");
             getSorts()[coinFlip].lancerSort(personnage);

@@ -3,7 +3,7 @@
  */
 public class Barbare extends Guerrier{
 
-    public void barbare() {
+    public Barbare() {
         setHP(100);
         setDefense(3);
         setForce(10);

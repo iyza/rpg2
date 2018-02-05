@@ -3,7 +3,7 @@
  */
 public class MortSubite extends Sort{
     private int coinFlip = (int)(Math.random()*10);
-    public void mortSubite () {
+    public MortSubite () {
         setDmg(9999);
         setCout(10);
         setNomDuSort("Mort Subite");
