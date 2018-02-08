@@ -1,3 +1,7 @@
+package sorts;
+
+import personnages.Personnage;
+
 /**
  * Created by BajLu1731402 on 05/02/2018.
  */
@@ -6,7 +10,7 @@ public class Empoisonnement extends Sort{
     public Empoisonnement () {
         setDmg(2);
         setCout(2);
-        setNomDuSort("Empoisonnement");
+        setNomDuSort("sorts.Empoisonnement");
     }
     public void lancerSort(Personnage personnage) {
         nbCast++;

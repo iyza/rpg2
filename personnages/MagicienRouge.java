@@ -1,3 +1,8 @@
+package personnages;
+
+import sorts.Empoisonnement;
+import sorts.MortSubite;
+
 /**
  * Created by BajLu1731402 on 01/02/2018.
  */

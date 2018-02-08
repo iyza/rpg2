@@ -1,3 +1,5 @@
+import personnages.*;
+
 import java.util.Scanner;
 
 /**
@@ -80,6 +82,7 @@ public class Jeux {
         System.out.println("");
         System.out.println("");
         while (game) {
+
             stop();
             System.out.println("");
             System.out.println(personnage1.getNom() + " : " + personnage1.getHP() + "HP");
@@ -102,6 +105,12 @@ public class Jeux {
                         game = false;
                     }
                 }
+            }
+
+            if (personnage1 instanceof Magicien && personnage2 instanceof Magicien && ((Magicien) personnage1).getMagie() <= 0 && ((Magicien) personnage2).getMagie() <= 0) {
+                System.out.println("");
+                System.out.println("Ah bordel! Les deux magiciens n'ont pu de magie...");
+                game = false;
             }
         }
     }

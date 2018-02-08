@@ -1,3 +1,7 @@
+package personnages;
+
+import sorts.Sort;
+
 /**
  * Created by BajLu1731402 on 01/02/2018.
  */
@@ -9,6 +13,7 @@ public abstract class Magicien extends Personnage{
     public Magicien() {
         setHP(60);
         setDefense(1);
+
     }
 
     public int getMagie() {
@@ -30,7 +35,6 @@ public abstract class Magicien extends Personnage{
     public void attaquer(Personnage personnage) {
         int coinFlip = (int)(Math.random()*2);
         if (getMagie() >= getSorts()[coinFlip].getCout()) {
-
             System.out.println(getNom() + " lance le sort : " + getSorts()[coinFlip].getNomDuSort() + " et il perd " + getSorts()[coinFlip].getCout() + " magie.");
             magie = magie - getSorts()[coinFlip].getCout();
             System.out.println("Il lui reste " + magie + " magie.");
