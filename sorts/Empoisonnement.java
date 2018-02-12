@@ -10,7 +10,7 @@ public class Empoisonnement extends Sort{
     public Empoisonnement () {
         setDmg(2);
         setCout(2);
-        setNomDuSort("sorts.Empoisonnement");
+        setNomDuSort("Empoisonnement");
     }
     public void lancerSort(Personnage personnage) {
         nbCast++;

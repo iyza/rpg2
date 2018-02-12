@@ -1,5 +1,6 @@
 package personnages;
 
+import armes.Magique;
 import sorts.Sort;
 
 /**
@@ -7,13 +8,14 @@ import sorts.Sort;
  */
 public abstract class Magicien extends Personnage{
 
+    protected Magique arme;
     protected int magie;
     protected Sort sorts[] = new Sort[2];
 
     public Magicien() {
         setHP(60);
         setDefense(1);
-
+        this.arme = arme;
     }
 
     public int getMagie() {
@@ -32,6 +34,8 @@ public abstract class Magicien extends Personnage{
         this.sorts = sorts;
     }
 
+    public abstract int ajouteForce();
+
     public void attaquer(Personnage personnage) {
         int coinFlip = (int)(Math.random()*2);
         if (getMagie() >= getSorts()[coinFlip].getCout()) {
@@ -39,6 +43,7 @@ public abstract class Magicien extends Personnage{
             magie = magie - getSorts()[coinFlip].getCout();
             System.out.println("Il lui reste " + magie + " magie.");
             getSorts()[coinFlip].lancerSort(personnage);
+            personnage.setHP(personnage.getHP()-ajouteForce());
         }
         else {
             System.out.println(getNom() + " n'a pas assez de magie pour lancer le sort : " + getSorts()[coinFlip].getNomDuSort() + "!");

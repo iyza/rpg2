@@ -35,4 +35,6 @@ public abstract class Personnage {
 
     public abstract void attaquer(Personnage personnage);
 
+    public abstract int ajouteForce();
+
 }

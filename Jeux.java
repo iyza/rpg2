@@ -1,3 +1,4 @@
+import armes.*;
 import personnages.*;
 
 import java.util.Scanner;
@@ -12,12 +13,14 @@ public class Jeux {
         Personnage personnage2 = null;
         int choix;
         boolean choisi = true;
+        boolean choisi2 = true;
         boolean game = true;
 
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Bienvenue dans RPG Simulator!");
         System.out.println("");
+
         while (choisi) {
             System.out.println("Veuillez choisir le premier personnage");
             System.out.println("1. Barbare\n" +
@@ -31,16 +34,112 @@ public class Jeux {
             }
             switch (choix) {
                 case 1:
-                    personnage1 = new Barbare();
+                    while (choisi2) {
+                        System.out.println("Quelle arme voulez-vous lui assigner ?\n" +
+                                "1. Masse\n" +
+                                "2. Épée Lourde\n" +
+                                "3. Sceptre\n" +
+                                "4. Masamune");
+                        choix = sc.nextInt();
+                        if (choix < 5 && choix > 0) {
+                            choisi2 = false;
+                        }
+                        switch (choix) {
+                            case 1:
+                                personnage1 = new Barbare(new Masse());
+                                break;
+                            case 2:
+                                personnage1 = new Barbare(new EpeeLourde());
+                                break;
+                            case 3:
+                                personnage1 = new Barbare(new Sceptre());
+                                break;
+                            case 4:
+                                personnage1 = new Barbare(new Masamune());
+                                break;
+                        }
+                    }
                     break;
                 case 2:
-                    personnage1 = new Paladin();
+                    while (choisi2) {
+                        System.out.println("Quelle arme voulez-vous lui assigner ?\n" +
+                                "1. Épée\n" +
+                                "2. Épée Magique\n" +
+                                "3. Épée Lourde\n" +
+                                "4. Masamune");
+                        choix = sc.nextInt();
+                        if (choix < 5 && choix > 0) {
+                            choisi2 = false;
+                        }
+                        switch (choix) {
+                            case 1:
+                                personnage1 = new Paladin(new Epee());
+                                break;
+                            case 2:
+                                personnage1 = new Paladin(new EpeeMagique());
+                                break;
+                            case 3:
+                                personnage1 = new Paladin(new EpeeLourde());
+                                break;
+                            case 4:
+                                personnage1 = new Paladin(new Masamune());
+                                break;
+                        }
+                    }
                     break;
                 case 3:
-                    personnage1 = new MagicienNoir();
+                    while (choisi2) {
+                        System.out.println("Quelle arme voulez-vous lui assigner ?\n" +
+                                "1. Baguette\n" +
+                                "2. Épée Magique\n" +
+                                "3. Sceptre\n" +
+                                "4. Masamune");
+                        choix = sc.nextInt();
+                        if (choix < 5 && choix > 0) {
+                            choisi2 = false;
+                        }
+                        switch (choix) {
+                            case 1:
+                                personnage1 = new MagicienNoir(new Baguette());
+                                break;
+                            case 2:
+                                personnage1 = new MagicienNoir(new EpeeMagique());
+                                break;
+                            case 3:
+                                personnage1 = new MagicienNoir(new Sceptre());
+                                break;
+                            case 4:
+                                personnage1 = new MagicienNoir(new Masamune());
+                                break;
+                        }
+                    }
                     break;
                 case 4:
-                    personnage1 = new MagicienRouge();
+                    while (choisi2) {
+                        System.out.println("Quelle arme voulez-vous lui assigner ?\n" +
+                                "1. Baguette\n" +
+                                "2. Épée Magique\n" +
+                                "3. Sceptre\n" +
+                                "4. Masamune");
+                        choix = sc.nextInt();
+                        if (choix < 5 && choix > 0) {
+                            choisi2 = false;
+                        }
+                        switch (choix) {
+                            case 1:
+                                personnage1 = new MagicienRouge(new Baguette());
+                                break;
+                            case 2:
+                                personnage1 = new MagicienRouge(new EpeeMagique());
+                                break;
+                            case 3:
+                                personnage1 = new MagicienRouge(new Sceptre());
+                                break;
+                            case 4:
+                                personnage1 = new MagicienRouge(new Masamune());
+                                break;
+                        }
+                    }
                     break;
                 default:
                     System.out.println("Choix invalide.");
@@ -51,6 +150,7 @@ public class Jeux {
         System.out.println("");
         choisi = true;
         while (choisi) {
+            choisi2 = true;
             System.out.println("Veuillez choisir le deuxieme personnage");
             System.out.println("1. Barbare\n" +
                     "2. Paladin\n" +
@@ -63,16 +163,112 @@ public class Jeux {
             }
             switch (choix) {
                 case 1:
-                    personnage2 = new Barbare();
+                    while (choisi2) {
+                        System.out.println("Quelle arme voulez-vous lui assigner ?\n" +
+                                "1. Masse\n" +
+                                "2. Épée Lourde\n" +
+                                "3. Sceptre\n" +
+                                "4. Masamune");
+                        choix = sc.nextInt();
+                        if (choix < 5 && choix > 0) {
+                            choisi2 = false;
+                        }
+                        switch (choix) {
+                            case 1:
+                                personnage2 = new Barbare(new Masse());
+                                break;
+                            case 2:
+                                personnage2 = new Barbare(new EpeeLourde());
+                                break;
+                            case 3:
+                                personnage2 = new Barbare(new Sceptre());
+                                break;
+                            case 4:
+                                personnage2 = new Barbare(new Masamune());
+                                break;
+                        }
+                    }
                     break;
                 case 2:
-                    personnage2 = new Paladin();
+                    while (choisi2) {
+                        System.out.println("Quelle arme voulez-vous lui assigner ?\n" +
+                                "1. Épée\n" +
+                                "2. Épée Magique\n" +
+                                "3. Épée Lourde\n" +
+                                "4. Masamune");
+                        choix = sc.nextInt();
+                        if (choix < 5 && choix > 0) {
+                            choisi2 = false;
+                        }
+                        switch (choix) {
+                            case 1:
+                                personnage2 = new Paladin(new Epee());
+                                break;
+                            case 2:
+                                personnage2 = new Paladin(new EpeeMagique());
+                                break;
+                            case 3:
+                                personnage2 = new Paladin(new EpeeLourde());
+                                break;
+                            case 4:
+                                personnage2 = new Paladin(new Masamune());
+                                break;
+                        }
+                    }
                     break;
                 case 3:
-                    personnage2 = new MagicienNoir();
+                    while (choisi2) {
+                        System.out.println("Quelle arme voulez-vous lui assigner ?\n" +
+                                "1. Baguette\n" +
+                                "2. Épée Magique\n" +
+                                "3. Sceptre\n" +
+                                "4. Masamune");
+                        choix = sc.nextInt();
+                        if (choix < 5 && choix > 0) {
+                            choisi2 = false;
+                        }
+                        switch (choix) {
+                            case 1:
+                                personnage2 = new MagicienNoir(new Baguette());
+                                break;
+                            case 2:
+                                personnage2 = new MagicienNoir(new EpeeMagique());
+                                break;
+                            case 3:
+                                personnage2 = new MagicienNoir(new Sceptre());
+                                break;
+                            case 4:
+                                personnage2 = new MagicienNoir(new Masamune());
+                                break;
+                        }
+                    }
                     break;
                 case 4:
-                    personnage2 = new MagicienRouge();
+                    while (choisi2) {
+                        System.out.println("Quelle arme voulez-vous lui assigner ?\n" +
+                                "1. Baguette\n" +
+                                "2. Épée Magique\n" +
+                                "3. Sceptre\n" +
+                                "4. Masamune");
+                        choix = sc.nextInt();
+                        if (choix < 5 && choix > 0) {
+                            choisi2 = false;
+                        }
+                        switch (choix) {
+                            case 1:
+                                personnage2 = new MagicienRouge(new Baguette());
+                                break;
+                            case 2:
+                                personnage2 = new MagicienRouge(new EpeeMagique());
+                                break;
+                            case 3:
+                                personnage2 = new MagicienRouge(new Sceptre());
+                                break;
+                            case 4:
+                                personnage2 = new MagicienRouge(new Masamune());
+                                break;
+                        }
+                    }
                     break;
                 default:
                     System.out.println("Choix invalide.");

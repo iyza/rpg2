@@ -1,5 +1,6 @@
 package personnages;
 
+import armes.Magique;
 import sorts.BouleDeFeu;
 import sorts.PicDeGlace;
 
@@ -8,10 +9,16 @@ import sorts.PicDeGlace;
  */
 public class MagicienNoir extends Magicien {
 
-    public MagicienNoir() {
+    public MagicienNoir(Magique arme) {
+        super();
         setMagie(50);
         setNom("Magicien Noir");
         getSorts()[0] = new BouleDeFeu();
         getSorts()[1] = new PicDeGlace();
+        this.arme = arme;
+    }
+
+    public int ajouteForce() {
+        return arme.lancerUnSort();
     }
 }
